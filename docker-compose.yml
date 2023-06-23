@@ -1,0 +1,15 @@
+version: '4.8.1'
+services:
+  master:
+    build: ./master
+    ports:
+      - 9870:9870 
+      - 8088:8088
+  drone-1:
+    build: ./drone
+  drone-2:
+    build: ./drone
+
+networks:
+  default:
+    driver: bridge
